@@ -1,0 +1,20 @@
+<html>
+    <head></head>
+    <body>
+        <center>
+            <h1>{{prediction}}</h1>
+            {%if prediction=='No Traffic'%}
+            <img src="{{url_for('static',filename='no.jpg')}}" height="500px" width="700px">
+            {%elif prediction=='Busy or Normal flow'%}
+            <img src="{{url_for('static',filename='less.jpg')}} " alt="LESS">
+            {%elif prediction=='Heavy Traffic'%}
+            <img src="{{url_for('static',filename='traffic.jpg')}}">
+            {%else%}
+            <img src="{{url_for('static',filename='worst.jpg')}}">
+            {%endif%}
+        </center>
+    </body>
+</html>
+    
+
+
