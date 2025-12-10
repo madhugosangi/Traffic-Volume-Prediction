@@ -14,15 +14,6 @@ from sklearn.metrics import mean_squared_error
 import matplotlib.pyplot as plt
 
 
-
-
-def posix_time(dt):
-    return (dt-datetime(1970,1,1))/timedelta(seconds=1)
-
-
-
-
-
 data=pd.read_csv("Train.csv")
 
 data.loc[data["is_holiday"]!='None','is_holiday']=1
@@ -149,3 +140,4 @@ import pickle
     
 
 pickle.dump(xgbr,open('traffic.pkl','wb'))
+
